@@ -1,10 +1,11 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "personal-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Personal Portfolio for https://github.com/LeoMrel",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "LeoMrel <leonardomrel0028@gmail.com>",
   "dependencies": {
+    "framer-motion": "^5.3.2",
     "gatsby": "^4.2.0",
     "gatsby-plugin-gatsby-cloud": "^4.2.0",
     "gatsby-plugin-image": "^2.2.0",
@@ -17,10 +18,16 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-reveal": "^1.2.2",
+    "react-tilt": "^0.1.4"
   },
   "devDependencies": {
-    "prettier": "^2.4.1"
+    "autoprefixer": "^10.4.0",
+    "gatsby-plugin-postcss": "^5.2.0",
+    "postcss": "^8.3.11",
+    "prettier": "2.4.1",
+    "tailwindcss": "^2.2.19"
   },
   "keywords": [
     "gatsby"
