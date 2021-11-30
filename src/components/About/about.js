@@ -36,7 +36,14 @@ const About = () => {
                 stuff together, shall we? ;)
               </p>
               <button className="mix-blend-difference btn from-left px-3 py-1 my-3">
-                <a>Resume</a>
+                <a
+                  href="https://drive.google.com/file/d/1OEZ03cRV2qeZ9ci_Uu6mmeh8o9PUdjYX/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="resume"
+                >
+                  Resume
+                </a>
               </button>
             </Fade>
           </div>
