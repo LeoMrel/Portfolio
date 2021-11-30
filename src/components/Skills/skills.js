@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../Layout/layout"
+import Fade from "react-reveal/Fade"
 import react from "../../images/skills/frontend/react.svg"
 import javascript from "../../images/skills/frontend/javascript.svg"
 import html from "../../images/skills/frontend/html.svg"
@@ -35,7 +36,7 @@ const Skills = () => {
       title: "Tools",
       skills: [
         { icon: graphql, label: "Graphql" },
-        { icon: nextjs, label: "NextJs" },
+        { icon: nextjs, label: "Next.Js" },
         { icon: gatsby, label: "Gatsby" },
         { icon: tailwind, label: "TailwindCss" },
         { icon: git, label: "Git" },
@@ -58,32 +59,36 @@ const Skills = () => {
     <Layout id="skills" height="h-full">
       <div className="text-white w-full h-full flex flex-col my-5">
         <div className="w-full flex place-content-center">
-          <h1>Skills</h1>
+          <Fade bottom>
+            <h1>Skills</h1>
+          </Fade>
         </div>
         <div className="flex flex-col lg:flex-row gap-y-3 place-items-center justify-between py-14">
           <div className="w-full flex flex-col lg:flex-row justify-between place-items-center">
             {skillList.map((e, index) => {
               return (
                 <div key={index} className="text-center">
-                  <h1>{e.title}</h1>
-                  <div className="grid grid-cols-3 mt-5 mb-14 gap-5">
-                    {e.skills.map((skill, index) => {
-                      return (
-                        <div
-                          key={index}
-                          className="flex place-items-center flex-col gap-y-1"
-                        >
-                          <img
-                            alt={skill.label}
-                            src={skill.icon}
-                            width="55px"
-                            height="55px"
-                          />
-                          <p className="text-sm">{skill.label}</p>
-                        </div>
-                      )
-                    })}
-                  </div>
+                  <Fade left>
+                    <h1>{e.title}</h1>
+                    <div className="grid grid-cols-3 mt-5 mb-14 gap-5">
+                      {e.skills.map((skill, index) => {
+                        return (
+                          <div
+                            key={index}
+                            className="flex place-items-center flex-col gap-y-1"
+                          >
+                            <img
+                              alt={skill.label}
+                              src={skill.icon}
+                              width="55px"
+                              height="55px"
+                            />
+                            <p className="text-sm">{skill.label}</p>
+                          </div>
+                        )
+                      })}
+                    </div>
+                  </Fade>
                 </div>
               )
             })}

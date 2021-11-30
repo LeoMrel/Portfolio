@@ -1,8 +1,9 @@
 import React from "react"
+import Fade from "react-reveal/Fade"
 
 const Icons = ({ fillColor = "#fff" }) => {
   return (
-    <>
+    <Fade right>
       <a
         className="transition-all hover:-translate-y-1 transform"
         rel="noreferrer"
@@ -56,7 +57,7 @@ const Icons = ({ fillColor = "#fff" }) => {
           <path d="M 30.398438 2 L 7 2 L 7 48 L 43 48 L 43 14.601563 Z M 30 15 L 30 4.398438 L 40.601563 15 Z" />
         </svg>
       </a>
-    </>
+    </Fade>
   )
 }
 
