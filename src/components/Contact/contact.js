@@ -13,7 +13,7 @@ const Contact = () => {
             <h3>
               Let's build something
               <br />
-              <Fade left delay={1500}>
+              <Fade left delay={800}>
                 ...together ;)
               </Fade>
             </h3>

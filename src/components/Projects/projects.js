@@ -1,110 +1,10 @@
 import React from "react"
 import Layout from "../Layout/layout"
 import Fade from "react-reveal/Fade"
-import movieapp from "../../images/thumbnails/movieapp.jpg"
-import sortingapp from "../../images/thumbnails/sortingapp.jpg"
-import mernapp from "../../images/thumbnails/mernapp.jpg"
-import react from "../../images/skills/frontend/react.svg"
-import tailwind from "../../images/skills/tools/tailwind.svg"
-import typescript from "../../images/skills/frontend/typescript.svg"
-import nextjs from "../../images/skills/tools/next-js.svg"
-import javascript from "../../images/skills/frontend/javascript.svg"
-import mongodb from "../../images/skills/backend/mongodb.svg"
 import Tilt from "react-tilt"
+import { projectsList } from "./projectsList"
 
 const Projects = () => {
-  const projectsList = [
-    {
-      title: "Sorting Visualizer",
-      quote: {
-        quote:
-          "Many computer scientists consider sorting to be the most fundamental problem in the study of algorithms.",
-        from: "—Introduction to Algorithms 3rd edition.",
-      },
-      description: `Sorting algorithms were my introduction to the field,
-      and as such, I decided to code a sorting visualizer to test my knowledge and understanding.
-      Also took on the oportunity to learn Typescript!`,
-      covers: [
-        "Bubble Sort",
-        "Insertion Sort",
-        "Selection Sort",
-        "Merge Sort",
-        "Quick Sort",
-      ],
-      image: sortingapp,
-      site: "https://leomrel.github.io/Sorting-Visualizer/",
-      repo: "https://github.com/LeoMrel/Sorting-App",
-      stack: [
-        {
-          icon: react,
-          label: "React",
-        },
-        {
-          icon: tailwind,
-          label: "Tailwind",
-        },
-        {
-          icon: typescript,
-          label: "Typescript",
-        },
-      ],
-    },
-    {
-      title: "NTMDB (Not The Movie Database)",
-      description: `A movie, tv show and people search application inspired
-      by The Movie Database.`,
-      covers: [
-        "Client & Server Side Rendering",
-        "Static & Incremental Static Site Generation",
-        "Data fetching (SWR library)",
-        "Search queries",
-        "& more!",
-      ],
-      image: movieapp,
-      site: "https://ntmdb-nu.vercel.app/",
-      repo: "https://github.com/LeoMrel/movieapp",
-      stack: [
-        {
-          icon: nextjs,
-          label: "Next.Js",
-        },
-        { icon: tailwind, label: "Tailwind" },
-        { icon: javascript, label: "Javascript" },
-      ],
-    },
-    {
-      title: "Full Stack Blog App (Coming soon)",
-      description: `A full stack application inspired by Facebook, implementing the MERN stack.`,
-      covers: [
-        "AWS Amplify Services",
-        "Database Integration (MongoDB)",
-        "SSG & ISG",
-        "User Authentication",
-        "& more!",
-      ],
-      image: mernapp,
-      site: null,
-      stack: [
-        {
-          icon: nextjs,
-          label: "Next.Js",
-        },
-        {
-          icon: tailwind,
-          label: "Tailwind",
-        },
-        {
-          icon: mongodb,
-          label: "MongoDB",
-        },
-        {
-          icon: typescript,
-          label: "Typescript",
-        },
-      ],
-    },
-  ]
-
   return (
     <Layout id="projects" height="h-full">
       <div className="w-full h-full">
@@ -132,7 +32,9 @@ const Projects = () => {
                           </div>
                         )}
                         <p>{e.description}</p>
-
+                        {e.warning && (
+                          <i className="font-semibold">{`*${e.warning}`}</i>
+                        )}
                         {e.covers && (
                           <div>
                             <p className="font-bold">This project covers:</p>
@@ -187,7 +89,7 @@ const Projects = () => {
                   </div>
                   <Tilt
                     options={{ max: 10, perspective: 3000, scale: 1.05 }}
-                    className="my-5 max-h-full lg:w-3/5 relative"
+                    className="max-h-auto lg:max-h-0 lg:w-10/12 relative lg:mr-5"
                   >
                     <Fade right>
                       <div>
@@ -196,11 +98,11 @@ const Projects = () => {
                             href={`${e.site}`}
                             target="_blank"
                             rel="noreferrer"
-                            className="bg-transparent absolute w-full h-80 lg:h-96"
+                            className="h-full w-full absolute"
                           />
                         )}
                         <img
-                          className="rounded-sm"
+                          className="rounded-sm h-full w-full shadow-xl"
                           src={e.image}
                           alt={`${e.title}`}
                         />

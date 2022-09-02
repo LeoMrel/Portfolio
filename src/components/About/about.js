@@ -12,8 +12,8 @@ const About = () => {
             <h1>About</h1>
           </Fade>
         </div>
-        <div className="flex flex-col lg:flex-row justify-between place-items-center py-20 h-full w-full">
-          <div className="transform -rotate-90">
+        <div className="flex flex-col gap-x-5 lg:flex-row justify-between place-items-center p-5 h-full w-full">
+          <div className="">
             <Fade left>
               <img src={selfie} alt="selfie" />
             </Fade>
@@ -31,13 +31,14 @@ const About = () => {
                 challenging my skills to the next level with every new project I
                 build (I took the chance and learned{" "}
                 <span className="text-purple-600">Gatsby</span> for this
-                portfolio!). At the moment I'm studying about cloud architecture
-                and AI! Let's <span className="text-gray-800">build</span> great
-                stuff together, shall we? ;)
+                portfolio!). At the moment I'm studying AI development to broad
+                my skills even more! Let's{" "}
+                <span className="text-gray-800">build</span> great stuff
+                together, shall we? {";)"}
               </p>
               <button className="mix-blend-difference btn from-left px-3 py-1 my-3">
                 <a
-                  href="https://drive.google.com/file/d/1OEZ03cRV2qeZ9ci_Uu6mmeh8o9PUdjYX/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1-05wOz6Wow_aLf7oTszlxPgXelC85pgB/view?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="resume"
