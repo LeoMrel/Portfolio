@@ -59,7 +59,7 @@ const Icons = ({ fillColor = "#fff" }) => {
               rel="noreferrer"
               target="_blank"
               aria-label="resume"
-              href="https://drive.google.com/file/d/1Z5qpJdUOFw71XZiM2eMC-P-lGE79My1k/view?usp=sharing"
+              href="https://drive.google.com/file/d/1G2XvItG_4qAaVeSWrqiak6l-a-9zpbOL/view?usp=share_link"
             >
               <svg
                 fill={fillColor}

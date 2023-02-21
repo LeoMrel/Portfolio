@@ -38,7 +38,7 @@ const About = () => {
               </p>
               <button className="mix-blend-difference btn from-left px-3 py-1 my-3">
                 <a
-                  href="https://drive.google.com/file/d/1Z5qpJdUOFw71XZiM2eMC-P-lGE79My1k/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1G2XvItG_4qAaVeSWrqiak6l-a-9zpbOL/view?usp=share_link"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="resume"
